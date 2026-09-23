@@ -49,5 +49,5 @@ Dat is sneller voor feedback en je hebt er geen git-setup voor nodig.
 
 # Oplossingen
 
-Oplossingsfiles (al dan niet volledig, soms worden delen van een oefening als oefening gelaten voor de studenten) bevinden zich in een andere folder `solutions` op de root directory.
+Oplossingsfiles (al dan niet volledig, soms worden delen van een oefening als oefening gelaten voor de studenten) bevinden zich in een andere folder `solutions` binnen de map per week.
 > ⚠️ **Belangrijk**: deze `solutions` folder zal dus files bevatten die wekelijks worden overgeschreven. Zet hier niet je eigen oplossing in, want dan wordt die met `git pull` overschreven of leidt die tot een merge conflct. 
