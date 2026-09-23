@@ -46,3 +46,8 @@ Dat is sneller voor feedback en je hebt er geen git-setup voor nodig.
 > ⚠️ **Belangrijk**: Sla het notebook telkens op **met uitgevoerde cellen** vóór je
 > de tests draait. De pytest voert het notebook namelijk opnieuw uit vanuit het
 > opgeslagen bestand — niet-werkcellen worden overgeslagen en missen dan variabelen.
+
+# Oplossingen
+
+Oplossingsfiles (al dan niet volledig, soms worden delen van een oefening als oefening gelaten voor de studenten) bevinden zich in een andere folder `solutions` op de root directory.
+> ⚠️ **Belangrijk**: deze `solutions` folder zal dus files bevatten die wekelijks worden overgeschreven. Zet hier niet je eigen oplossing in, want dan wordt die met `git pull` overschreven of leidt die tot een merge conflct. 
