@@ -6,6 +6,10 @@ from pathlib import Path
 
 NOTEBOOKS = {
     "week01": Path(__file__).resolve().parents[1] / "week01" / "knn_checkpoint_opgave.ipynb",
+    "week02": Path(__file__).resolve().parents[1] / "week02" / "svm_checkpoint_opgave.ipynb",
+    "week03": Path(__file__).resolve().parents[1] / "week03" / "decision_trees_oefening_checkpoint_opgave.ipynb",
+    "week04": Path(__file__).resolve().parents[1] / "week04" / "arima_checkpoint_opgave.ipynb",
+    "week05": Path(__file__).resolve().parents[1] / "week05" / "herhaling_classification_checkpoint_opgave.ipynb",
 }
 
 
@@ -13,7 +17,7 @@ def _notebook_namespace(week: str) -> dict:
     path = NOTEBOOKS[week]
     nb = nbformat.read(path, as_version=4)
     client = NotebookClient(
-        nb, timeout=600, kernel_name="python3",
+        nb, timeout=600, kernel_name="python3", allow_errors=True,
         resources={"metadata": {"path": str(path.parent)}},
     )
     client.execute()
@@ -33,7 +37,25 @@ def _notebook_namespace(week: str) -> dict:
         os.chdir(old_cwd)
     return ns
 
+@pytest.fixture(scope="session")
+def week03():
+    return _notebook_namespace("week03")
+
+
+@pytest.fixture(scope="session")
+def week04():
+    return _notebook_namespace("week04")
 
 @pytest.fixture(scope="session")
 def week01():
     return _notebook_namespace("week01")
+
+
+@pytest.fixture(scope="session")
+def week02():
+    return _notebook_namespace("week02")
+
+
+@pytest.fixture(scope="session")
+def week05():
+    return _notebook_namespace("week05")
